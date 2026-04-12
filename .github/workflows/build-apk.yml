@@ -31,6 +31,14 @@ jobs:
       - name: Install Dependencies
         run: flutter pub get
 
+      - name: Generate Gradle Wrapper
+        run: |
+          cd android
+          flutter pub get
+          cd ..
+          flutter build apk --config-only || true
+          ls android/gradle/wrapper/
+
       - name: Accept Android Licenses
         run: yes | flutter doctor --android-licenses || true
 
