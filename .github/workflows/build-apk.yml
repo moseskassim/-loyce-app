@@ -24,20 +24,11 @@ jobs:
       - name: Set Up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.6'
           channel: 'stable'
           cache: true
 
       - name: Install Dependencies
         run: flutter pub get
-
-      - name: Generate Gradle Wrapper
-        run: |
-          cd android
-          flutter pub get
-          cd ..
-          flutter build apk --config-only || true
-          ls android/gradle/wrapper/
 
       - name: Accept Android Licenses
         run: yes | flutter doctor --android-licenses || true
