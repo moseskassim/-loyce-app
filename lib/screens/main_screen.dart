@@ -33,7 +33,7 @@ class _MainScreenState extends State<MainScreen> {
             child: Image.asset(
               'assets/images/loyce_bg.jpg',
               fit: BoxFit.cover,
-              color: Colors.white.withOpacity(0.1), // Subtle visibility
+              color: Colors.white.withValues(alpha: 0.1), // Subtle visibility
               colorBlendMode: BlendMode.lighten,
               errorBuilder: (context, error, stackTrace) => Container(color: const Color(0xFFFDF7FF)),
             ),

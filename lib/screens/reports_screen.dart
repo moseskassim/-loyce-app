@@ -95,7 +95,7 @@ class ReportsScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.2),
+        color: color.withValues(alpha: 0.2),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: color, width: 2),
       ),
@@ -120,12 +120,12 @@ class ReportsScreen extends StatelessWidget {
             shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
+                color: Colors.black.withValues(alpha: 0.05),
                 blurRadius: 10,
               ),
             ],
           ),
-          child: Icon(icon, color: Theme.of(context).colorScheme.primary.withOpacity(0.6)),
+          child: Icon(icon, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.6)),
         ),
         const SizedBox(height: 8),
         Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),

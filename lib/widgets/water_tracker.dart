@@ -19,7 +19,7 @@ class WaterTracker extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 5),
           ),
@@ -52,7 +52,7 @@ class WaterTracker extends StatelessWidget {
                   width: 45,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: filled ? Colors.blueAccent.withOpacity(0.2) : Colors.grey[100],
+                    color: filled ? Colors.blueAccent.withValues(alpha: 0.2) : Colors.grey[100],
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       color: filled ? Colors.blueAccent : Colors.grey[300]!,

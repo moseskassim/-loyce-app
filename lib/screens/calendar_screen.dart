@@ -17,7 +17,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final data = Provider.of<LoyceDataService>(context);
+    Provider.of<LoyceDataService>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -55,7 +55,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
             // Custom Styling
             calendarStyle: CalendarStyle(
               todayDecoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5),
                 shape: BoxShape.circle,
               ),
               selectedDecoration: BoxDecoration(
@@ -82,7 +82,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withValues(alpha: 0.05),
                     blurRadius: 10,
                   ),
                 ],

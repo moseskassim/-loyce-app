@@ -81,7 +81,7 @@ class HexagonPainter extends CustomPainter {
     path.close();
 
     // Adding some shadow
-    canvas.drawShadow(path, Colors.pink.withOpacity(0.5), 10, true);
+    canvas.drawShadow(path, Colors.pink.withValues(alpha: 0.5), 10, true);
     canvas.drawPath(path, paint);
   }
 

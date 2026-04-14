@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
             errorBuilder: (context, error, stackTrace) => Container(color: Colors.pink[100]),
           ),
           // Dark Overlay
-          Container(color: Colors.black.withOpacity(0.3)),
+          Container(color: Colors.black.withValues(alpha: 0.3)),
           // Welcome Message
           const Center(
             child: Padding(

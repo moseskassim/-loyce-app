@@ -30,7 +30,7 @@ class SettingsScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 30,
-                  backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                  backgroundColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                   child: Icon(Icons.person, color: Theme.of(context).colorScheme.primary, size: 40),
                 ),
                 const SizedBox(width: 15),
@@ -103,7 +103,7 @@ class SettingsScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: ListTile(
-        leading: Icon(icon, color: Theme.of(context).colorScheme.primary.withOpacity(0.7)),
+        leading: Icon(icon, color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.7)),
         title: Text(title, style: const TextStyle(fontWeight: FontWeight.w500)),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
